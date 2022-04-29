@@ -25,5 +25,6 @@ hs_err_pid*
 
 *.iml
 *.jar
+*.properties
 /KidWranglerWeb/target/
 /KidWranglerData/target/
