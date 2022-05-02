@@ -50,7 +50,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com:gendath/KidWrangler.git</developerConnection>
-        <tag>KidWrangler-0.0.1</tag>
+        <tag>KidWrangler-0.0.2</tag>
     </scm>
 
 
