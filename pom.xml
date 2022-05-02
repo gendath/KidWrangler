@@ -49,7 +49,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:git@github.com:gendath/KidWrangler.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/gendath/KidWrangler.git</developerConnection>
         <tag>KidWrangler-0.0.1</tag>
     </scm>
 
