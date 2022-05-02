@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.perbear</groupId>
     <artifactId>KidWrangler</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>KidWrangler</name>
     <description>KidWrangler</description>
     <properties>
@@ -50,7 +50,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com:gendath/KidWrangler.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>KidWrangler-0.0.1</tag>
     </scm>
 
 
