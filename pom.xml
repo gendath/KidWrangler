@@ -49,15 +49,10 @@
             </plugin>
         </plugins>
     </build>
-<!--    <scm>-->
-<!--        <developerConnection>scm:git:ssh://git@github.com:gendath/KidWrangler.git</developerConnection>-->
-<!--        <tag>HEAD</tag>-->
-<!--    </scm>-->
-
     <scm>
-        <connection>scm:git:ssh://git@github.com:gendath/KidWrangler.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:gendath/KidWrangler.git</developerConnection>
-        <url>https://github.com/gendath/KidWrangler</url>
+        <developerConnection>scm:git:git@github.com:gendath/KidWrangler.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
+
 
 </project>
