@@ -2,12 +2,6 @@ package com.perbear.kidwrangler.services;
 
 import com.perbear.kidwrangler.Model.Parent;
 
-import java.util.Set;
-
-public interface ParentService {
+public interface ParentService extends CrudService<Parent,Long> {
     Parent findByLastName(String lastName);
-    Parent findById(Long Id);
-    Parent save(Parent parent);
-    Set<Parent> findAll();
-
 }
