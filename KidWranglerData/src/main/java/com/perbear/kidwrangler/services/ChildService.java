@@ -1,7 +1,7 @@
 package com.perbear.kidwrangler.services;
 
-import com.perbear.kidwrangler.Model.Child;
+import com.perbear.kidwrangler.Model.Patient;
 
-public interface ChildService extends CrudService<Child,Long>{
+public interface ChildService extends CrudService<Patient,Long>{
 
 }
