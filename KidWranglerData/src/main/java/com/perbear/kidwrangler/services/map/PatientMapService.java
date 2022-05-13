@@ -1,11 +1,17 @@
 package com.perbear.kidwrangler.services.map;
 
+import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.Model.Patient;
-import com.perbear.kidwrangler.services.CrudService;
+import com.perbear.kidwrangler.services.PatientService;
 
 import java.util.Set;
 
-public class ChildMapService extends AbstractMapService<Patient,Long> implements CrudService<Patient,Long> {
+public class PatientMapService extends AbstractMapService<Patient,Long> implements PatientService {
+    @Override
+    public Parent findByLastName(String lastName) {
+        return null;
+    }
+
     @Override
     public Set<Patient> findAll() {
         return super.findAll();

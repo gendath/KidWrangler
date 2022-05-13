@@ -5,5 +5,4 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ParentService extends CrudService<Parent,Long> {
-    Parent findByLastName(String lastName);
 }

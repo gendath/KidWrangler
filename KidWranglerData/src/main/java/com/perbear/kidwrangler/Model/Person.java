@@ -1,9 +1,13 @@
 package com.perbear.kidwrangler.Model;
 
+import java.util.Set;
+
 public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
     private int age;
+
+    private Set<Parent> parents;
 
     public int getAge() {
         return age;
