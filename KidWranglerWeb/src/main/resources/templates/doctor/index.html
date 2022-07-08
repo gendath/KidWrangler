@@ -6,9 +6,25 @@
 </head>
 <body>
 <h1 th:text="'Doctor Index Page'">Index Page</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="doctor: ${doctors}">
+    <td th:text="${doctor?.id}"></td>
+    <td th:text="${doctor?.firstName}"></td>
+    <td th:text="${doctor?.lastName}"></td>
 
-<ul>
-  <li th:each="{}"></li>
-</ul>
+
+  </tr>
+  </tbody>
+</table>
+
+
 </body>
 </html>
