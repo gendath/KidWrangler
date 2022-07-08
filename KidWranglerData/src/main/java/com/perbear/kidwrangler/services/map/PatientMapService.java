@@ -3,9 +3,10 @@ package com.perbear.kidwrangler.services.map;
 import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.Model.Patient;
 import com.perbear.kidwrangler.services.PatientService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PatientMapService extends AbstractMapService<Patient,Long> implements PatientService {
     @Override
     public Parent findByLastName(String lastName) {
