@@ -32,7 +32,7 @@ public class PatientMapService extends AbstractMapService<Patient,Long> implemen
 
     @Override
     public Patient save(Patient object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

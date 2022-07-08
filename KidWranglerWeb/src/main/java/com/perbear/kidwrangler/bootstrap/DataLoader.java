@@ -24,7 +24,6 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Parent parent1 = new Parent();
-        parent1.setId(1l);
         parent1.setFirstName("Perry");
         parent1.setAge(44);
         parent1.setLastName("Shelton");
@@ -32,14 +31,12 @@ public class DataLoader implements CommandLineRunner {
 
 
         Parent parent2 = new Parent();
-        parent2.setId(2l);
         parent2.setFirstName("Rhonda");
         parent2.setAge(52);
         parent2.setLastName("Shelton");
         parentService.save(parent2);
 
         Doctor doctor1 = new Doctor();
-        doctor1.setId(3l);
         doctor1.setFirstName("Victor");
         doctor1.setLastName("Frankenstein");
         doctor1.setAge(65);
@@ -47,7 +44,6 @@ public class DataLoader implements CommandLineRunner {
         doctorService.save(doctor1);
 
         Doctor doctor2 = new Doctor();
-        doctor2.setId(4l);
         doctor2.setFirstName("The");
         doctor2.setLastName("Doctor");
         doctor2.setAge(912);
@@ -55,7 +51,6 @@ public class DataLoader implements CommandLineRunner {
         doctorService.save(doctor2);
 
         Patient patient1 = new Patient();
-        patient1.setId(5l);
         patient1.setFirstName("William");
         patient1.setLastName("Shelton");
         patient1.setAge(9);
@@ -65,7 +60,6 @@ public class DataLoader implements CommandLineRunner {
         patientService.save(patient1);
 
         Patient patient2 = new Patient();
-        patient2.setId(6l);
         patient2.setFirstName("Stephen");
         patient2.setLastName("Shelton");
         patient2.setAge(21);

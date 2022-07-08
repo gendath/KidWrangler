@@ -32,7 +32,7 @@ public class ParentMapService extends AbstractMapService<Parent,Long> implements
 
     @Override
     public Parent save(Parent object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override
