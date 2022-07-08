@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/doctor")
 @Controller
 public class DoctorController {
-    DoctorService doctorService;
+    private final DoctorService doctorService;
+
+    public DoctorController(DoctorService doctorService) {
+        this.doctorService = doctorService;
+    }
 
     @RequestMapping({"","/","/index","/index.html"})
     public String home(Model model){

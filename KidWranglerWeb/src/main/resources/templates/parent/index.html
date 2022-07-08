@@ -6,5 +6,21 @@
 </head>
 <body>
 <h1 th:text="'Parent Index Page'">Index Page</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="parent: ${parents}">
+    <td th:text="${parent?.id}"></td>
+    <td th:text="${parent?.firstName}"></td>
+    <td th:text="${parent?.lastName}"></td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>

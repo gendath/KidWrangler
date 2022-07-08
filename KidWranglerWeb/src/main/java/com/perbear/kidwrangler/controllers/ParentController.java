@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/parent")
 @Controller
 public class ParentController {
-    ParentService parentService;
+    private final ParentService parentService;
+
+    public ParentController(ParentService parentService) {
+        this.parentService = parentService;
+    }
 
     @RequestMapping({"","/","/index","/index.html"})
     public String home(Model model){
