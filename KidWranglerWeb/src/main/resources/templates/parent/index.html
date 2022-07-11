@@ -5,22 +5,24 @@
   <title>KidWrangler Appointment Scheduling</title>
 </head>
 <body>
-<h1 th:text="'Parent Index Page'">Index Page</h1>
-<table>
+<h2 th:text="'Parents'">Index Page</h2>
+
+<table class="table table-striped">
   <thead>
-  <tr>
-    <th>ID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-  </tr>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
   </thead>
+
   <tbody>
-  <tr th:each="parent: ${parents}">
-    <td th:text="${parent?.id}"></td>
-    <td th:text="${parent?.firstName}"></td>
-    <td th:text="${parent?.lastName}"></td>
-  </tr>
+    <tr th:each="parent: ${parents}">
+      <td th:text="${parent?.firstName}"></td>
+      <td th:text="${parent?.lastName}"></td>
+    </tr>
   </tbody>
+
 </table>
+
 </body>
 </html>
