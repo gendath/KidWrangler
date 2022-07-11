@@ -11,4 +11,8 @@ public class IndexController {
     public String home(Model model){
         return "index";
     }
+    @RequestMapping("/*")
+    public String onError(Model model){
+        return "notimplemented";
+    }
 }

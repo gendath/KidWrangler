@@ -18,4 +18,6 @@ public class ParentController {
         model.addAttribute("parents",parentService.findAll());
         return "parent/index";
     }
+
+
 }
