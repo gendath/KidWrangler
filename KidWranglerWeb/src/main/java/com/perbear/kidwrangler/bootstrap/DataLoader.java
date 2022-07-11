@@ -3,6 +3,7 @@ package com.perbear.kidwrangler.bootstrap;
 import com.perbear.kidwrangler.Model.Doctor;
 import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.Model.Patient;
+import com.perbear.kidwrangler.Model.Specialty;
 import com.perbear.kidwrangler.services.DoctorService;
 import com.perbear.kidwrangler.services.ParentService;
 import com.perbear.kidwrangler.services.PatientService;
@@ -47,6 +48,8 @@ public class DataLoader implements CommandLineRunner {
         Doctor doctor1 = new Doctor();
         doctor1.setFirstName("Victor");
         doctor1.setLastName("Frankenstein");
+        doctor1.getSpecialties().add(new Specialty("Pediatrics"));
+        doctor1.getSpecialties().add(new Specialty("Internal Medicine"));
         doctor1.setAge(65);
 
         doctorService.save(doctor1);
@@ -54,6 +57,8 @@ public class DataLoader implements CommandLineRunner {
         Doctor doctor2 = new Doctor();
         doctor2.setFirstName("The");
         doctor2.setLastName("Doctor");
+        doctor2.getSpecialties().add(new Specialty("Pediatrics"));
+        doctor2.getSpecialties().add(new Specialty("Euthanasia"));
         doctor2.setAge(912);
 
         doctorService.save(doctor2);
@@ -63,6 +68,8 @@ public class DataLoader implements CommandLineRunner {
         patient1.setLastName("Shelton");
         patient1.setAge(9);
         patient1.setDoctor(doctor1);
+        doctor1.getPatients().add(patient1);
+        doctorService.save(doctor1);
         patient1.getParents().add(parent1);
         parent1.getChildren().add(patient1);
         parentService.save(parent1);
@@ -76,6 +83,8 @@ public class DataLoader implements CommandLineRunner {
         patient2.setLastName("Shelton");
         patient2.setAge(21);
         patient2.setDoctor(doctor2);
+        doctor2.getPatients().add(patient2);
+        doctorService.save(doctor2);
         patient2.getParents().add(parent1);
         parent1.getChildren().add(patient2);
         parentService.save(parent1);
