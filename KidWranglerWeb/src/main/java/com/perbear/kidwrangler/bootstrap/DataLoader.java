@@ -27,6 +27,10 @@ public class DataLoader implements CommandLineRunner {
         parent1.setFirstName("Perry");
         parent1.setAge(44);
         parent1.setLastName("Shelton");
+        parent1.setAddress1("4177 N Palm Ave.");
+        parent1.setCity("Fresno");
+        parent1.setState("CA");
+        parent1.setPhoneNumber(559_859_3964l);
         parentService.save(parent1);
 
 
@@ -34,6 +38,10 @@ public class DataLoader implements CommandLineRunner {
         parent2.setFirstName("Rhonda");
         parent2.setAge(52);
         parent2.setLastName("Shelton");
+        parent2.setAddress1("4177 N Palm Ave.");
+        parent2.setCity("Fresno");
+        parent2.setState("CA");
+        parent2.setPhoneNumber(559_859_3964l);
         parentService.save(parent2);
 
         Doctor doctor1 = new Doctor();

@@ -10,15 +10,21 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Phone Number</th>
     </tr>
   </thead>
 
   <tbody>
     <tr th:each="parent: ${parents}">
       <td th:text="${parent?.firstName}"></td>
-      <td th:text="${parent?.lastName}"></td>
+      <td th:text="${parent?.address1}"></td>
+      <td th:text="${parent?.city}"></td>
+      <td th:text="${parent?.state}"></td>
+      <td th:text="${parent?.phoneNumber}"></td>
     </tr>
   </tbody>
 
