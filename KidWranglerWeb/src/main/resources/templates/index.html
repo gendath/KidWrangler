@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 <head>
     <meta charset="UTF-8">
     <title>KidWrangler Appointment Scheduling</title>
 </head>
 <body>
-<h1 th:text="'Index Page'">Index Page</h1>
+<h2 th:text="'Welcome to Kid Wrangler Pediatics'">Index Page</h2>
+<div class="row">
+    <div class="col-md-12">
+        <img src="../static/resources/images/officeDrawing.jpg" alt="Office Drawing" class="image-responsive center" th:src="@{/resources/images/officeDrawing.jpg}">
+    </div>
+</div>
 </body>
 </html>
