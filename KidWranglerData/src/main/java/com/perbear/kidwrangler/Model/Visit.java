@@ -1,11 +1,17 @@
 package com.perbear.kidwrangler.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
-
+@Entity
 public class Visit extends BaseEntity{
     private LocalDate date;
     private String Description;
+    @ManyToOne
     private Patient patient;
+
+    @ManyToOne
+    private Doctor doctor;
 
     public Visit() {
         this.date = LocalDate.now();
