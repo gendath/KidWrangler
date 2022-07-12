@@ -1,10 +1,17 @@
 package com.perbear.kidwrangler.Model;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import java.util.HashSet;
+import java.util.Set;
 
+@Entity
 public class Parent extends Person{
-    private final List<Patient> children;
+    @ManyToMany
+    @JoinTable(name = "parent_child",joinColumns = @JoinColumn(name = "parent_id"),inverseJoinColumns = @JoinColumn(name = "child_id"))
+    private final Set<Patient> children;
     private String address1;
     private String address2;
     private String city;
@@ -12,10 +19,10 @@ public class Parent extends Person{
     private Long phoneNumber;
 
     public Parent() {
-        this.children = new ArrayList<>();
+        this.children = new HashSet<>();
     }
 
-    public List<Patient> getChildren() {
+    public Set<Patient> getChildren() {
         return children;
     }
 

@@ -1,11 +1,20 @@
 package com.perbear.kidwrangler.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
-
+@Entity
 public class Visit extends BaseEntity{
     private LocalDate date;
     private String Description;
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
     private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;
 
     public Visit() {
         this.date = LocalDate.now();
