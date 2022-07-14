@@ -9,7 +9,7 @@ import java.util.Set;
 public class Doctor extends Person{
     @OneToMany(mappedBy = "doctor")
     private final List<Patient> patients;
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "doctor_specialty",joinColumns = @JoinColumn(name = "doctor_id"),inverseJoinColumns = @JoinColumn(name = "specialty_id"))
     private final Set<Specialty> specialties;
 

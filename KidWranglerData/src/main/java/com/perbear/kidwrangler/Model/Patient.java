@@ -13,7 +13,7 @@ public class Patient extends Person{
     @ManyToOne
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
-    @OneToMany(mappedBy = "patient")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "patient")
     private Set<Visit> appointments;
 
     public Patient() {

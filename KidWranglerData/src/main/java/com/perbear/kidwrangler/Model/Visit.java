@@ -16,6 +16,14 @@ public class Visit extends BaseEntity{
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
     public Visit() {
         this.date = LocalDate.now();
     }
