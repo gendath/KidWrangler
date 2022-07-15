@@ -1,8 +1,20 @@
 package com.perbear.kidwrangler.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+
+@Getter
+@Setter
+@ToString
+@SuperBuilder
+@AllArgsConstructor
 @Entity
 public class Doctor extends Person{
 
@@ -11,11 +23,8 @@ public class Doctor extends Person{
     private final Set<Specialty> specialties;
 
 
-    public Set<Visit> getAppointments() {
-        return appointments;
-    }
-
     @OneToMany(mappedBy = "doctor")
+    @ToString.Exclude
     private Set<Visit> appointments;
 
     public Doctor() {
@@ -23,9 +32,4 @@ public class Doctor extends Person{
         this.appointments = new HashSet<>();
     }
 
-
-
-    public Set<Specialty> getSpecialties() {
-        return specialties;
-    }
 }
