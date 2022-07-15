@@ -1,6 +1,5 @@
 package com.perbear.kidwrangler.services.map;
 
-import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.Model.Specialty;
 import com.perbear.kidwrangler.services.SpecialtyService;
 
@@ -10,7 +9,7 @@ public class SpecialtyMapService  extends AbstractMapService<Specialty,Long> imp
     private Specialty object;
 
     @Override
-    public Parent findByLastName(String lastName) {
+    public Set<Specialty> findByLastName(String lastName) {
         return null;
     }
 

@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class ParentMapService extends AbstractMapService<Parent,Long> implements ParentService {
     @Override
-    public Parent findByLastName(String lastName) {
+    public Set<Parent> findByLastName(String lastName) {
         return null;
     }
 

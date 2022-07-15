@@ -1,6 +1,5 @@
 package com.perbear.kidwrangler.services.map;
 
-import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.Model.Visit;
 import com.perbear.kidwrangler.services.VisitService;
 
@@ -8,7 +7,7 @@ import java.util.Set;
 
 public class VisitMapService extends AbstractMapService<Visit,Long> implements VisitService {
     @Override
-    public Parent findByLastName(String lastName) {
+    public Set<Visit> findByLastName(String lastName) {
         return null;
     }
 

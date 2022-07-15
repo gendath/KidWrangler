@@ -1,7 +1,6 @@
 package com.perbear.kidwrangler.services.map;
 
 import com.perbear.kidwrangler.Model.Demographics;
-import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.services.DemographicsService;
 
 import java.util.Set;
@@ -10,7 +9,7 @@ public class DemographicsMapService  extends AbstractMapService<Demographics,Lon
 
 
     @Override
-    public Parent findByLastName(String lastName) {
+    public Set<Demographics> findByLastName(String lastName) {
         return null;
     }
 
