@@ -2,9 +2,13 @@ package com.perbear.kidwrangler.services.map;
 
 import com.perbear.kidwrangler.Model.Demographics;
 import com.perbear.kidwrangler.services.DemographicsService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
+@Profile({"default","map"})
 public class DemographicsMapService  extends AbstractMapService<Demographics,Long> implements DemographicsService {
 
 

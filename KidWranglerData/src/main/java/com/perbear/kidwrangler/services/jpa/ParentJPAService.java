@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("JPA")
+@Profile("springdatajpa")
 public class ParentJPAService implements ParentService {
 
     private final ParentRepository parentRepository;
@@ -54,6 +54,11 @@ public class ParentJPAService implements ParentService {
 
     @Override
     public Parent save(Parent object) {
+//        object.getChildren().iterator().forEachRemaining(c->{
+//            if(c.getId()==null) {
+//                patientRepository.save(c);
+//            }
+//        });
         return parentRepository.save(object);
     }
 

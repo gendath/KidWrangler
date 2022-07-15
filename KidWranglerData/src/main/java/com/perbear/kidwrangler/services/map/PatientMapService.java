@@ -2,10 +2,12 @@ package com.perbear.kidwrangler.services.map;
 
 import com.perbear.kidwrangler.Model.Patient;
 import com.perbear.kidwrangler.services.PatientService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
+@Profile({"default","map"})
 public class PatientMapService extends AbstractMapService<Patient,Long> implements PatientService {
     @Override
     public Set<Patient> findByLastName(String lastName) {

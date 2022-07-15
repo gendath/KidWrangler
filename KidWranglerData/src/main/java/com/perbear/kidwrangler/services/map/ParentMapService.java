@@ -2,10 +2,12 @@ package com.perbear.kidwrangler.services.map;
 
 import com.perbear.kidwrangler.Model.Parent;
 import com.perbear.kidwrangler.services.ParentService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
+@Profile({"default","map"})
 
 public class ParentMapService extends AbstractMapService<Parent,Long> implements ParentService {
     @Override

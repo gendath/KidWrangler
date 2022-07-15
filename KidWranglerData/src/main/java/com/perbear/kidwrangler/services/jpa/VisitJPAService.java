@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("JPA")
+@Profile("springdatajpa")
 public class VisitJPAService implements VisitService {
 
     private final VisitRepository visitRepository;
@@ -38,6 +38,9 @@ public class VisitJPAService implements VisitService {
 
     @Override
     public Visit save(Visit object) {
+        if(object.getDoctor()==null || object.getPatient()==null){
+            throw new RuntimeException("Invalid visit object");
+        }
         return visitRepository.save(object);
     }
 

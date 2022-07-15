@@ -67,33 +67,20 @@ public class DataLoader implements CommandLineRunner {
         patient1.setFirstName("William");
         patient1.setLastName("Shelton");
         patient1.setAge(9);
-        patient1.setDoctor(doctor1);
-        doctor1.getPatients().add(patient1);
-        doctorService.save(doctor1);
-        patient1.getParents().add(parent1);
         parent1.getChildren().add(patient1);
-        parentService.save(parent1);
-        patient1.getParents().add(parent2);
         parent2.getChildren().add(patient1);
-        parentService.save(parent2);
         patientService.save(patient1);
 
         Patient patient2 = new Patient();
         patient2.setFirstName("Stephen");
         patient2.setLastName("Shelton");
         patient2.setAge(21);
-        patient2.setDoctor(doctor2);
-        doctor2.getPatients().add(patient2);
-        doctorService.save(doctor2);
-        patient2.getParents().add(parent1);
         parent1.getChildren().add(patient2);
-        parentService.save(parent1);
-        patient2.getParents().add(parent2);
         parent2.getChildren().add(patient2);
-        parentService.save(parent2);
-        patient2.getParents().add(parent2);
         patientService.save(patient2);
 
+        parentService.save(parent1);
+        parentService.save(parent2);
 
     }
 }
