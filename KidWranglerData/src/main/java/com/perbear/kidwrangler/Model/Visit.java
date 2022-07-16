@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -24,4 +23,12 @@ public class Visit extends BaseEntity{
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
+    @Builder
+    public Visit(Long Id, LocalDate date, String description, Patient patient, Doctor doctor) {
+        super(Id);
+        this.date = date;
+        Description = description;
+        this.patient = patient;
+        this.doctor = doctor;
+    }
 }

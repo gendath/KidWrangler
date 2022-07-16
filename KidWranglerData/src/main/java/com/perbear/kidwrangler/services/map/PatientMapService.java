@@ -6,12 +6,14 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+import java.util.stream.Collectors;
+
 @Service
 @Profile({"default","map"})
 public class PatientMapService extends AbstractMapService<Patient,Long> implements PatientService {
     @Override
     public Set<Patient> findByLastName(String lastName) {
-        return null;
+        return this.findAll().stream().filter(object->object.getLastName().equalsIgnoreCase(lastName)).collect(Collectors.toSet());
     }
 
     @Override
