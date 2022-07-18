@@ -33,9 +33,10 @@ jobs:
           paths:
             - ~/.m2
           key: kid-wrangler-{{ checksum "pom.xml" }}
-      - run: mvn install -DskipTests
+      - run: mvn install
 
       - run: mvn dependency:go-offline
+      - run: mvn test
 
       # Then run your tests!
       - run: mvn integration-test
